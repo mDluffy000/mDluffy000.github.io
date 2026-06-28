@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coursework Details | Yufei Liu</title>
+  <meta name="description" content="Yufei Liu's coursework archive in power electronics, microelectronics packaging, and analog IC design experiments.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #66717a;
+      --line: #d9e1e7;
+      --paper: #f7f8f6;
+      --panel: #ffffff;
+      --green: #2f6f5e;
+      --blue: #285f91;
+      --red: #a94f4b;
+      --gold: #b68a33;
+      --shadow: 0 18px 48px rgba(23, 32, 38, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px clamp(20px, 5vw, 72px);
+      border-bottom: 1px solid rgba(217, 225, 231, 0.8);
+      background: rgba(247, 248, 246, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--ink);
+      color: white;
+      font-size: 14px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: clamp(28px, 5vw, 70px);
+      align-items: center;
+      padding: clamp(58px, 8vw, 112px) clamp(20px, 5vw, 72px) 38px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(42px, 6.8vw, 88px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: #46515a;
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      font-weight: 720;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(182, 138, 51, 0.24), transparent 22%),
+        radial-gradient(circle at 86% 28%, rgba(40, 95, 145, 0.18), transparent 25%),
+        linear-gradient(135deg, #ffffff, #edf3f1);
+      box-shadow: var(--shadow);
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      background-image:
+        linear-gradient(90deg, rgba(23, 32, 38, 0.08) 1px, transparent 1px),
+        linear-gradient(rgba(23, 32, 38, 0.08) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(135deg, #000, transparent 78%);
+    }
+
+    .trace {
+      position: absolute;
+      border: 2px solid currentColor;
+      border-radius: 8px;
+      color: var(--green);
+    }
+
+    .trace.one {
+      left: 42px;
+      top: 62px;
+      width: 58%;
+      height: 118px;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .trace.two {
+      right: 44px;
+      top: 122px;
+      width: 44%;
+      height: 156px;
+      color: var(--blue);
+      border-left: 0;
+    }
+
+    .trace.three {
+      left: 78px;
+      bottom: 74px;
+      width: 62%;
+      height: 104px;
+      color: var(--red);
+      border-top: 0;
+    }
+
+    .chip {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: grid;
+      width: 180px;
+      height: 180px;
+      place-items: center;
+      transform: translate(-50%, -50%);
+      border: 1px solid #1e2b33;
+      border-radius: 8px;
+      background: #fdfdfb;
+      box-shadow: 0 18px 38px rgba(23, 32, 38, 0.16);
+    }
+
+    .chip::before {
+      content: "";
+      width: 104px;
+      height: 104px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        linear-gradient(90deg, transparent 48%, rgba(47, 111, 94, 0.9) 49% 51%, transparent 52%),
+        linear-gradient(transparent 48%, rgba(40, 95, 145, 0.88) 49% 51%, transparent 52%),
+        #f4f6f4;
+    }
+
+    .pin {
+      position: absolute;
+      width: 10px;
+      height: 28px;
+      border-radius: 3px;
+      background: #aab6bc;
+    }
+
+    .pin:nth-child(1) { left: 28px; top: -14px; }
+    .pin:nth-child(2) { left: 62px; top: -14px; }
+    .pin:nth-child(3) { right: 28px; bottom: -14px; }
+    .pin:nth-child(4) { right: 62px; bottom: -14px; }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin: 24px clamp(20px, 5vw, 72px) 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+
+    .metric {
+      min-height: 118px;
+      padding: 24px;
+      background: var(--panel);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 78px clamp(20px, 5vw, 72px);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.62fr) minmax(280px, 0.38fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 360px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 8px 28px rgba(23, 32, 38, 0.06);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: #eef3ef;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .card h3 {
+      margin: 18px 0 10px;
+      font-size: 22px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: #4d5860;
+      font-size: 15px;
+    }
+
+    .card ul {
+      display: grid;
+      gap: 9px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #44505a;
+      font-size: 14px;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      transform: translateY(-50%);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      max-width: 980px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 26px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .row:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .row strong {
+      color: var(--blue);
+    }
+
+    .row p {
+      margin: 0;
+      color: #46515a;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .skill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      color: #34414a;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .footer {
+      padding: 38px clamp(20px, 5vw, 72px);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .section-head,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: 340px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav {
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .chip {
+        width: 148px;
+        height: 148px;
+      }
+
+      .chip::before {
+        width: 86px;
+        height: 86px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Yufei Liu home">
+        <span class="mark">YL</span>
+        <span>Yufei Liu</span>
+      </a>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="#work">Coursework</a>
+        <a href="#learning">Learning</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Coursework & Notes · Junior Spring</p>
+          <h1>Coursework archive from circuits to silicon systems.</h1>
+          <p class="lead">
+            I am Yufei Liu, a microelectronics student documenting hands-on work in power conversion,
+            microelectronics packaging, and analog IC design. My recent coursework connects measurement,
+            LTspice simulation, package-level thinking, and transistor-level EDA verification.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View coursework</a>
+            <a class="button" href="index.html">Back to home</a>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Abstract circuit and chip visual">
+          <div class="trace one"></div>
+          <div class="trace two"></div>
+          <div class="trace three"></div>
+          <div class="chip">
+            <span class="pin"></span>
+            <span class="pin"></span>
+            <span class="pin"></span>
+            <span class="pin"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrics" aria-label="Portfolio highlights">
+        <div class="metric">
+          <strong>3</strong>
+          <span>focused hardware learning tracks</span>
+        </div>
+        <div class="metric">
+          <strong>8+</strong>
+          <span>lab reports, design reports, and presentations reviewed</span>
+        </div>
+        <div class="metric">
+          <strong>90 dB</strong>
+          <span>reported optimized open-loop gain in the op-amp mini project</span>
+        </div>
+      </div>
+
+      <section id="work">
+        <div class="section-head">
+          <h2>Selected Coursework Projects</h2>
+          <p>These summaries are based on local reports from Power Electronics, Packaging, and Modern Integrated Circuit Experiment folders.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Power Electronics</span>
+            <h3>Converter and inverter lab portfolio</h3>
+            <p>
+              Built a measurement-to-simulation workflow across oscilloscope fundamentals, rectifiers,
+              DC-DC boost conversion, and single-phase PWM inverter analysis.
+            </p>
+            <ul>
+              <li>Measured period, frequency, RMS value, duty cycle, mean value, and TL494 PWM output.</li>
+              <li>Compared half-wave and full-wave rectifiers with capacitor filtering and regulation behavior.</li>
+              <li>Used LTspice to study boost converter duty cycle, ripple, inductor current, and XL6009E1 behavior.</li>
+              <li>Analyzed square-wave, bipolar PWM, and unipolar PWM inverter spectra and harmonic distribution.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="tag">Packaging</span>
+            <h3>AI-aided packaging design study</h3>
+            <p>
+              Wrote and presented a study of how AI can support the traditional microelectronics packaging
+              loop from requirements and layout to multi-domain verification.
+            </p>
+            <ul>
+              <li>Mapped conventional simulation-driven packaging design flows and their iteration cost.</li>
+              <li>Reviewed electrical concerns including impedance, reflection, crosstalk, SSN, and parasitics.</li>
+              <li>Connected thermal and mechanical analysis to heat conduction, CTE mismatch, stress, and warpage.</li>
+              <li>Positioned AI as a tool for faster exploration, optimization, and design-space screening.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="tag">Analog IC Design</span>
+            <h3>Two-stage CMOS operational amplifier</h3>
+            <p>
+              Completed a full analog IC learning path using EDA tools: device characterization,
+              amplifier design, frequency response, layout, DRC, LVS, and tool comparison.
+            </p>
+            <ul>
+              <li>Simulated NMOS I-V characteristics across VDS, VGS, process corners, and device sizing.</li>
+              <li>Designed a current-source load common-source amplifier and tuned bias conditions.</li>
+              <li>Evaluated a two-stage op-amp through gain, GBW, phase margin, PSRR, CMRR, and slew-rate simulations.</li>
+              <li>Compared Empyrean Aether and Cadence Virtuoso results, including PDK and process-node effects.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="learning">
+        <div class="section-head">
+          <h2>Learning Narrative</h2>
+          <p>A concise map of what the reports show: not only finished assignments, but a growing hardware design method.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="row">
+            <strong>Measure first</strong>
+            <p>Started with oscilloscope and waveform literacy: reading time base, calculating frequency, RMS, duty cycle, and mean value, then checking those values against expected circuit behavior.</p>
+          </div>
+          <div class="row">
+            <strong>Model and compare</strong>
+            <p>Used LTspice simulations to connect ideal equations with practical converter behavior, including ripple, harmonics, switching schemes, and losses that appear in real hardware.</p>
+          </div>
+          <div class="row">
+            <strong>Think at system level</strong>
+            <p>Extended beyond circuits into packaging, where electrical, thermal, and mechanical effects interact and design quality depends on multi-physics tradeoffs.</p>
+          </div>
+          <div class="row">
+            <strong>Close the IC loop</strong>
+            <p>Moved from transistor I-V behavior to amplifier design and physical verification, using EDA tools to test whether a schematic can become a manufacturable layout.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-head">
+          <h2>Technical Skill Map</h2>
+          <p>Keywords distilled from the reports and supporting files.</p>
+        </div>
+        <div class="skills" aria-label="Technical skills">
+          <span class="skill">LTspice</span>
+          <span class="skill">PWM inverter analysis</span>
+          <span class="skill">DC-DC boost converters</span>
+          <span class="skill">Rectifier and filter circuits</span>
+          <span class="skill">Oscilloscope measurement</span>
+          <span class="skill">Microelectronics packaging</span>
+          <span class="skill">Signal and power integrity basics</span>
+          <span class="skill">Thermal management</span>
+          <span class="skill">Empyrean Aether</span>
+          <span class="skill">Cadence Virtuoso</span>
+          <span class="skill">Analog CMOS design</span>
+          <span class="skill">Process-corner simulation</span>
+          <span class="skill">DRC / LVS</span>
+          <span class="skill">Python report automation</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Yufei Liu · Microelectronics portfolio · Updated from local coursework reports</span>
+    </footer>
+  </div>
+</body>
+</html>
