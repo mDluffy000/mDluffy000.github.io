@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yufei Liu | Microelectronics Portfolio</title>
-  <meta name="description" content="Yufei Liu's homepage for microelectronics research preparation, coursework, projects, and learning notes.">
+  <title>Projects | Yufei Liu</title>
+  <meta name="description" content="Yufei Liu's project archive for competition work, modeling papers, and technical project evidence.">
   <style>
     :root {
       --ink: #172026;
@@ -249,6 +249,10 @@
       margin-top: 20px;
     }
 
+    .wide-card {
+      grid-column: 1 / -1;
+    }
+
     .project-feature {
       grid-column: span 2;
       min-height: 420px;
@@ -362,10 +366,9 @@
       <span>Yufei Liu</span>
     </a>
     <nav class="navlinks">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="coursework.html">Coursework</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#evidence">Evidence</a>
       <a href="#updates">Updates</a>
     </nav>
   </header>
@@ -373,132 +376,130 @@
   <main id="top">
     <section class="hero">
       <div>
-        <p class="eyebrow">Microelectronics · IC Design · Research Archive</p>
-        <h1>A public record of my path into microelectronics research.</h1>
+        <p class="eyebrow">Projects · Competitions · Technical Evidence</p>
+        <h1>Project archive for competition work and technical practice.</h1>
         <p class="lead">
-          I am Yufei Liu, an incoming microelectronics graduate student at UESTC. This site is meant to grow into a
-          structured archive for research preparation, coursework, technical projects, reading notes, and experimental logs.
+          This page collects work that sits outside ordinary coursework: modeling competitions, IC design competitions,
+          project writeups, selected figures, certificates, and public-facing technical summaries.
         </p>
         <div class="actions">
-          <a class="button primary" href="coursework.html">Coursework details</a>
-          <a class="button" href="projects.html">Project details</a>
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button" href="index.html">Back to home</a>
         </div>
       </div>
 
       <aside class="signal" aria-label="Current direction">
-        <h2>Current Direction</h2>
+        <h2>Project Focus</h2>
         <div class="signal-list">
           <div class="signal-item">
-            <strong>Research preparation</strong>
-            <span>IC design, computing-in-memory, neuromorphic chips, and memristive neural networks.</span>
+            <strong>Competition records</strong>
+            <span>Keep awards, project context, and personal contribution clear and traceable.</span>
           </div>
           <div class="signal-item">
-            <strong>Technical foundation</strong>
-            <span>Analog IC design flow, EDA simulation, layout verification, packaging, and power electronics labs.</span>
+            <strong>Modeling and analysis</strong>
+            <span>Document modeling decisions, workflows, and feature interpretation where possible.</span>
           </div>
           <div class="signal-item">
-            <strong>Documentation habit</strong>
-            <span>Turning coursework, reports, experiments, and notes into a traceable long-term portfolio.</span>
+            <strong>Public-facing cleanup</strong>
+            <span>Add figures and summaries only after private materials are cleaned for publication.</span>
           </div>
         </div>
       </aside>
     </section>
 
-    <section id="about">
+    <section id="projects">
       <div class="section-head">
-        <h2>About This Site</h2>
-        <p>Home is the short orientation page. The detailed records live in separate pages so each archive can grow without crowding the first screen.</p>
+        <h2>Projects</h2>
+        <p>Competition work and technical projects that sit outside ordinary coursework.</p>
       </div>
       <div class="grid">
-        <article class="card">
-          <span class="tag">Profile</span>
-          <h3>Microelectronics learner</h3>
+        <article class="card project-feature">
+          <span class="tag">MCM/ICM 2026</span>
+          <h3>Mathematical Contest in Modeling: voting dynamics and fairness analysis</h3>
           <p>
-            I am preparing for graduate study in microelectronics, with current interests around IC design,
-            hardware-aware computation, EDA workflows, and long-term technical documentation.
+            For MCM/ICM Problem C, Team 2620121 wrote "Behind the Spotlight: A Comparative Analysis Based on
+            Kalman-smoothed Latent State Transition Model," a paper on fan-vote dynamics, voting-combination mechanisms,
+            and feature interpretation with XGBoost and SHAP. I contributed most of the modeling ideas and overall
+            analytical structure, and I was responsible for the full paper writing and final polishing. The team received
+            Honorable Mention.
           </p>
+          <div class="project-gallery" aria-label="MCM project images">
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-summary.png" alt="MCM paper summary sheet">
+              <figcaption>Summary sheet and model overview</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-overview.png" alt="MCM paper workflow figure">
+              <figcaption>Workflow and model-preparation page</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-certificate.png" alt="MCM Honorable Mention certificate">
+              <figcaption>Honorable Mention certificate</figcaption>
+            </figure>
+          </div>
         </article>
-        <article class="card">
-          <span class="tag">Method</span>
-          <h3>Evidence-based portfolio</h3>
+        <article class="card project-feature">
+          <span class="tag">集创赛 / 法动杯</span>
+          <h3>AI辅助5G滤波巴伦及封装设计</h3>
           <p>
-            Instead of treating the site as a static resume, I use it to organize reports, experiments,
-            figures, notes, and project outcomes into a traceable public record.
+            For the 10th National College Student Integrated Circuit Innovation and Entrepreneurship Competition,
+            our team CICC1003635, "做的全都对," submitted the 法动杯 preliminary technical report
+            "面向5G射频前端的智能滤波巴伦芯片建模与封装协同设计" and advanced to the regional final. The project targets
+            5G Sub-6GHz RF front ends with an IPD-based compact wideband filtering balun, combining transformer
+            coupling with a Chebyshev bandpass network to integrate single-ended-to-differential conversion,
+            impedance transformation, and out-of-band suppression in one chip-level passive structure. The design
+            used EMOptimizer for AI/FCell-driven parameter optimization and UltraEM for 3D full-wave electromagnetic
+            validation, reaching a 0.9 mm2 layout area with roughly 4.4 dB in-band insertion loss, return loss better
+            than 15 dB, strong 2.0 GHz and 5.0 GHz stopband rejection, and tightly controlled amplitude and phase
+            imbalance across the 3.0-4.5 GHz operating band.
           </p>
-        </article>
-        <article class="card">
-          <span class="tag">Structure</span>
-          <h3>Homepage as a hub</h3>
-          <p>
-            Coursework and projects are separated into detail pages. The homepage keeps the overview,
-            direction, and navigation clear.
-          </p>
+          <div class="project-gallery" aria-label="CICC project images">
+            <figure class="project-shot">
+              <img src="assets/projects/cicc/cicc-layout.png" alt="CICC filtering balun physical layout">
+              <figcaption>EMOptimizer physical layout</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/cicc/cicc-ultraem-transmission.png" alt="UltraEM transmission simulation curve">
+              <figcaption>UltraEM S21 and S31 validation</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/cicc/cicc-ultraem-phase.png" alt="UltraEM phase imbalance simulation curve">
+              <figcaption>UltraEM phase-balance result</figcaption>
+            </figure>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="research">
+    <section id="evidence">
       <div class="section-head">
-        <h2>Research Progress</h2>
-        <p>This section is intentionally modest for now. It marks the direction and will become richer as research work begins.</p>
+        <h2>Evidence Library</h2>
+        <p>Public-facing assets currently attached to project records.</p>
       </div>
       <div class="grid">
         <article class="card">
-          <span class="tag soon">Preparing</span>
-          <h3>IC design research entry</h3>
+          <span class="tag">MCM/ICM</span>
+          <h3>Paper visuals</h3>
           <p>
-            Building the background needed for graduate research in integrated circuit design, with attention to digital/RF IC design,
-            device-aware circuit thinking, and EDA workflows.
+            The project gallery currently uses curated screenshots from the paper summary, workflow page,
+            and certificate. Additional figures, such as SHAP interpretation, can be added when the layout is ready.
           </p>
         </article>
         <article class="card">
-          <span class="tag soon">Reading queue</span>
-          <h3>Computing-in-memory</h3>
+          <span class="tag">Contribution</span>
+          <h3>Personal role</h3>
           <p>
-            Future notes will organize paper reading, diagrams, and implementation questions around memory-centric computation and
-            hardware-efficient neural workloads.
+            For the MCM/ICM project, the record highlights modeling ideas, analytical structure, full paper writing,
+            final polishing, and team award outcome.
           </p>
         </article>
         <article class="card">
-          <span class="tag soon">Research log</span>
-          <h3>Neuromorphic chips</h3>
+          <span class="tag">CICC</span>
+          <h3>Preliminary report outcome</h3>
           <p>
-            This section will hold summaries, vocabulary, experiment notes, and reflections related to neuromorphic computing and
-            memristive neural network hardware.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="library">
-      <div class="section-head">
-        <h2>Detail Pages</h2>
-        <p>Home stays short; these entrances open the focused pages for coursework records and project evidence.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <span class="tag">Junior Spring</span>
-          <h3>Coursework</h3>
-          <p>
-            A detailed summary of Power Electronics, Microelectronic Packaging, and IC design experiment work, including lab reports,
-            LTspice simulation, EDA design flow, and layout verification.
-          </p>
-          <a class="button primary" href="coursework.html">Open coursework page</a>
-        </article>
-        <article class="card">
-          <span class="tag">Competitions</span>
-          <h3>Projects</h3>
-          <p>
-            A separate record for competition work and technical projects, including the MCM/ICM modeling paper,
-            award evidence, selected figures, and future IC competition materials.
-          </p>
-          <a class="button primary" href="projects.html">Open project page</a>
-        </article>
-        <article class="card">
-          <span class="tag soon">Next</span>
-          <h3>Research notes</h3>
-          <p>
-            A future page can collect paper reading, diagrams, terminology, and early research logs once the material is ready.
+            The 法动杯 technical document records the team's preliminary design, simulation flow,
+            tool comparison, and final performance summary. The project has advanced from the preliminary round
+            to the regional final; cleaned figures and presentation images can be added here later.
           </p>
         </article>
       </div>
@@ -512,18 +513,18 @@
       <div class="timeline">
         <div class="row">
           <strong>2026-06-28</strong>
-          <p>Published the first GitHub Pages site and separated the homepage from the coursework and project detail pages.</p>
+          <p>Separated projects into their own detail page so the homepage can stay as a concise navigation hub.</p>
         </div>
         <div class="row">
           <strong>Next</strong>
-          <p>Add a visual asset library, research reading notes, and project-specific pages as real materials accumulate.</p>
+          <p>Add cleaned IC competition figures and optional MCM SHAP evidence when those materials are ready.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>Yufei Liu · Microelectronics research and learning archive</span>
+    <span>Yufei Liu · Project archive</span>
   </footer>
 </body>
 </html>
