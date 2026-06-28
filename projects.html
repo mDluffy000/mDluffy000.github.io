@@ -254,15 +254,15 @@
     }
 
     .project-feature {
-      grid-column: span 2;
+      grid-column: 1 / -1;
       min-height: 420px;
     }
 
     .project-gallery {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
     }
 
     .project-shot {
@@ -275,15 +275,16 @@
     .project-shot img {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      object-position: top center;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      object-position: center;
+      background: #fbfcfb;
     }
 
     .project-shot figcaption {
-      padding: 10px;
+      padding: 12px 14px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 14px;
     }
 
     .timeline {
@@ -439,13 +440,12 @@
           </div>
         </article>
         <article class="card project-feature">
-          <span class="tag">集创赛 / 法动杯</span>
-          <h3>AI辅助5G滤波巴伦及封装设计</h3>
+          <span class="tag">CICC / FaDong Cup</span>
+          <h3>AI-Assisted 5G Filtering Balun and Packaging Co-Design</h3>
           <p>
             For the 10th National College Student Integrated Circuit Innovation and Entrepreneurship Competition,
-            our team CICC1003635, "做的全都对," submitted the 法动杯 preliminary technical report
-            "面向5G射频前端的智能滤波巴伦芯片建模与封装协同设计" and advanced to the regional final. The project targets
-            5G Sub-6GHz RF front ends with an IPD-based compact wideband filtering balun, combining transformer
+            Team CICC1003635 submitted a FaDong Cup preliminary technical report and advanced to the regional final.
+            The project targets 5G Sub-6GHz RF front ends with an IPD-based compact wideband filtering balun, combining transformer
             coupling with a Chebyshev bandpass network to integrate single-ended-to-differential conversion,
             impedance transformation, and out-of-band suppression in one chip-level passive structure. The design
             used EMOptimizer for AI/FCell-driven parameter optimization and UltraEM for 3D full-wave electromagnetic
@@ -497,7 +497,7 @@
           <span class="tag">CICC</span>
           <h3>Preliminary report outcome</h3>
           <p>
-            The 法动杯 technical document records the team's preliminary design, simulation flow,
+            The FaDong Cup technical document records the team's preliminary design, simulation flow,
             tool comparison, and final performance summary. The project has advanced from the preliminary round
             to the regional final; cleaned figures and presentation images can be added here later.
           </p>
