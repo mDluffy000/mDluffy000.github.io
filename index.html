@@ -249,6 +249,39 @@
       margin-top: 20px;
     }
 
+    .project-feature {
+      grid-column: span 2;
+      min-height: 420px;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .project-shot {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f4f6f4;
+    }
+
+    .project-shot img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .project-shot figcaption {
+      padding: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .timeline {
       display: grid;
       max-width: 980px;
@@ -283,6 +316,14 @@
       .hero,
       .section-head,
       .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-feature {
+        grid-column: span 1;
+      }
+
+      .project-gallery {
         grid-template-columns: 1fr;
       }
 
@@ -388,7 +429,7 @@
           <span class="tag soon">Research log</span>
           <h3>Neuromorphic chips</h3>
           <p>
-            Planned space for summaries, vocabulary, experiment notes, and reflections related to neuromorphic computing and
+            This section will hold summaries, vocabulary, experiment notes, and reflections related to neuromorphic computing and
             memristive neural network hardware.
           </p>
         </article>
@@ -430,23 +471,41 @@
     <section id="projects">
       <div class="section-head">
         <h2>Projects</h2>
-        <p>Not every project is research. This section will collect engineering builds, code, hardware experiments, and tooling.</p>
+        <p>Competition work and technical projects that sit outside ordinary coursework.</p>
       </div>
       <div class="grid">
-        <article class="card">
-          <span class="tag soon">Planned</span>
-          <h3>EDA and circuit tooling</h3>
-          <p>Small scripts, report automation, circuit-analysis helpers, and reproducible workflows can be documented here.</p>
+        <article class="card project-feature">
+          <span class="tag">MCM/ICM 2026</span>
+          <h3>Mathematical Contest in Modeling: voting dynamics and fairness analysis</h3>
+          <p>
+            Team 2620121 worked on Problem C with the paper "Behind the Spotlight: A Comparative Analysis Based on
+            Kalman-smoothed Latent State Transition Model." The work modeled fan-vote dynamics in Dancing with the Stars,
+            compared voting-combination mechanisms, and used XGBoost with SHAP analysis to interpret influencing features.
+            The team received Honorable Mention.
+          </p>
+          <div class="project-gallery" aria-label="MCM project images">
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-summary.png" alt="MCM paper summary sheet">
+              <figcaption>Summary sheet and model overview</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-overview.png" alt="MCM paper workflow figure">
+              <figcaption>Workflow and model-preparation page</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/projects/mcm/mcm-certificate.png" alt="MCM Honorable Mention certificate">
+              <figcaption>Honorable Mention certificate</figcaption>
+            </figure>
+          </div>
         </article>
         <article class="card">
-          <span class="tag soon">Planned</span>
-          <h3>Embedded and hardware work</h3>
-          <p>Future pages can include STM32, smart car experiments, control tuning, sensor work, and hardware debugging notes.</p>
-        </article>
-        <article class="card">
-          <span class="tag soon">Planned</span>
-          <h3>Digital design practice</h3>
-          <p>Vivado/VHDL exercises, simulation records, and digital circuit design notes can live here when ready.</p>
+          <span class="tag">IC Innovation Competition</span>
+          <h3>集创赛 / 法动杯</h3>
+          <p>
+            Competition experience connected to integrated-circuit design practice and engineering presentation. This project
+            belongs here as a real technical competition record; detailed documents, figures, and implementation notes can be
+            added once the materials are cleaned into a public-facing version.
+          </p>
         </article>
       </div>
     </section>
