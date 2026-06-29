@@ -311,10 +311,26 @@
     }
 
     .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       padding: 38px clamp(20px, 5vw, 72px);
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .visitor-count {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+    }
+
+    .visitor-count img {
+      display: block;
+      height: 22px;
     }
 
     @media (max-width: 920px) {
@@ -525,6 +541,9 @@
 
   <footer class="footer">
     <span>Yufei Liu · Project archive</span>
+    <span class="visitor-count" aria-label="Site visit counter">
+      <img src="https://hits.sh/mdluffy000.github.io.svg?style=flat-square&label=Views&color=2f6f5e&labelColor=172026" alt="Site views">
+    </span>
   </footer>
 </body>
 </html>
