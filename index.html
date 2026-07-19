@@ -405,16 +405,16 @@
         <h2>Current Direction</h2>
         <div class="signal-list">
           <div class="signal-item">
-            <strong>SRAM circuit design</strong>
+            <strong>SRAM research</strong>
             <span>6T bitcell validation, latch-type sense amplification, physical-design studies, and DRC-aware iteration.</span>
           </div>
           <div class="signal-item">
-            <strong>AI-assisted RFIC design</strong>
-            <span>Filtering-balun optimization in EMOptimizer, UltraEM full-wave verification, and a differential-antenna extension.</span>
+            <strong>Competition projects</strong>
+            <span>MCM/ICM modeling and the CICC FaDong Cup filtering-balun and differential-antenna subproject.</span>
           </div>
           <div class="signal-item">
-            <strong>EDA automation</strong>
-            <span>Reproducible Cadence/OpenAccess and JLCEDA Pro workflows for schematic, layout, PCB generation, and verification.</span>
+            <strong>Research tooling</strong>
+            <span>Reproducible Cadence/OpenAccess workflows that support SRAM schematic, layout, simulation, and verification.</span>
           </div>
         </div>
       </aside>
@@ -455,8 +455,8 @@
 
     <section id="research">
       <div class="section-head">
-        <h2>Research Progress</h2>
-        <p>Concrete design and verification work, with the completion boundary stated for each item.</p>
+        <h2>SRAM Research Progress</h2>
+        <p>A continuing memory-circuit study from transistor-level behavior to physical implementation.</p>
       </div>
       <div class="grid">
         <article class="card">
@@ -486,22 +486,21 @@
           </p>
         </article>
         <article class="card">
-          <span class="tag">Regional-final project</span>
-          <h3>AI-assisted filtering balun</h3>
+          <span class="tag soon">System integration</span>
+          <h3>From bitcell to SRAM subsystem</h3>
           <p>
-            Worked on an IPD filtering balun for the CICC FaDong Cup, using parameterized AI FCells and EMOptimizer
-            for design-space exploration, followed by UltraEM full-wave validation. The regional-final extension
-            adds a differential antenna and a broader RF verification set.
+            The 6T bitcell and sense amplifier are the first completed circuit units. The next research steps are the
+            precharge unit, row decoder, word-line driver, replica path, timing control, and output buffer, followed by
+            integrated read-operation verification.
           </p>
-          <a class="button" href="projects.html">View project evidence</a>
         </article>
         <article class="card">
-          <span class="tag">Prototype validated</span>
-          <h3>EDA automation workflows</h3>
+          <span class="tag">Research workflow</span>
+          <h3>Cadence and OpenAccess tooling</h3>
           <p>
-            Developed repeatable workflows for creating and inspecting Cadence OpenAccess cells through SSH and SKILL,
-            and for generating editable JLCEDA Pro projects directly from their SQLite/JSON representation. Demonstrations
-            include a transistor-level inverter and a small routed PCB with through-hole and 0805 footprints.
+            Built a reproducible SSH, Cadence SKILL, and OpenAccess workflow to create, inspect, and independently
+            verify SRAM-related schematic and layout cellviews. The tooling supports the research process; it is not
+            presented as a separate competition project.
           </p>
         </article>
       </div>
@@ -526,8 +525,8 @@
           <span class="tag">Competitions</span>
           <h3>Projects</h3>
           <p>
-            A separate record for competition work and technical projects, including the MCM/ICM modeling paper,
-            award evidence, selected figures, and future IC competition materials.
+            A separate record for competition work, with MCM/ICM and the CICC FaDong Cup represented as project
+            subprojects with their own evidence, methods, and outcomes.
           </p>
           <a class="button primary" href="projects.html">Open project page</a>
         </article>
@@ -549,24 +548,10 @@
       </div>
       <div class="timeline">
         <div class="row">
-          <strong>2026-07-17</strong>
-          <p>
-            Validated direct generation of editable JLCEDA Pro schematic and PCB projects, including nets, routing,
-            a closed board outline, through-hole footprints, and an 0805 SMD footprint.
-          </p>
-        </div>
-        <div class="row">
           <strong>2026-07-14</strong>
           <p>
             Completed schematic-level 6T SRAM debugging and latch-type sense-amplifier validation, then began
             DRC-aware Type-1b and Type-4 physical-design studies in Cadence.
-          </p>
-        </div>
-        <div class="row">
-          <strong>2026-07</strong>
-          <p>
-            Advanced the FaDong Cup filtering-balun project toward the regional final, expanding the design story
-            from AI-assisted passive optimization to differential-antenna integration and full-wave verification.
           </p>
         </div>
         <div class="row">
@@ -585,4 +570,3 @@
   </footer>
 </body>
 </html>
-
