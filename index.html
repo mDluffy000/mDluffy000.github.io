@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yufei Liu | Microelectronics Portfolio</title>
-  <meta name="description" content="Yufei Liu's homepage for microelectronics research preparation, coursework, projects, and learning notes.">
+  <title>Yufei Liu | IC Design, SRAM & RF Projects</title>
+  <meta name="description" content="Yufei Liu's portfolio for SRAM design, RFIC projects, EDA automation, coursework, and technical research notes.">
   <style>
     :root {
       --ink: #172026;
@@ -392,8 +392,8 @@
         <p class="eyebrow">Microelectronics · IC Design · Research Archive</p>
         <h1>A public record of my path into microelectronics research.</h1>
         <p class="lead">
-          I am Yufei Liu, an incoming microelectronics graduate student at UESTC. This site is meant to grow into a
-          structured archive for research preparation, coursework, technical projects, reading notes, and experimental logs.
+          I am Yufei Liu, an incoming microelectronics graduate student at UESTC. I use this site as a
+          working archive for IC design, SRAM experiments, RF/microwave projects, EDA automation, coursework, and technical writing.
         </p>
         <div class="actions">
           <a class="button primary" href="coursework.html">Coursework details</a>
@@ -405,16 +405,16 @@
         <h2>Current Direction</h2>
         <div class="signal-list">
           <div class="signal-item">
-            <strong>Research preparation</strong>
-            <span>IC design, computing-in-memory, neuromorphic chips, and memristive neural networks.</span>
+            <strong>SRAM circuit design</strong>
+            <span>6T bitcell validation, latch-type sense amplification, physical-design studies, and DRC-aware iteration.</span>
           </div>
           <div class="signal-item">
-            <strong>Technical foundation</strong>
-            <span>Analog IC design flow, EDA simulation, layout verification, packaging, and power electronics labs.</span>
+            <strong>AI-assisted RFIC design</strong>
+            <span>Filtering-balun optimization in EMOptimizer, UltraEM full-wave verification, and a differential-antenna extension.</span>
           </div>
           <div class="signal-item">
-            <strong>Documentation habit</strong>
-            <span>Turning coursework, reports, experiments, and notes into a traceable long-term portfolio.</span>
+            <strong>EDA automation</strong>
+            <span>Reproducible Cadence/OpenAccess and JLCEDA Pro workflows for schematic, layout, PCB generation, and verification.</span>
           </div>
         </div>
       </aside>
@@ -430,8 +430,8 @@
           <span class="tag">Profile</span>
           <h3>Microelectronics learner</h3>
           <p>
-            I am preparing for graduate study in microelectronics, with current interests around IC design,
-            hardware-aware computation, EDA workflows, and long-term technical documentation.
+            I am preparing for graduate study in microelectronics through hands-on work in memory circuits,
+            RF passive design, physical implementation, simulation, and EDA workflow development.
           </p>
         </article>
         <article class="card">
@@ -456,40 +456,52 @@
     <section id="research">
       <div class="section-head">
         <h2>Research Progress</h2>
-        <p>This section is intentionally modest for now. It marks the direction and will become richer as research work begins.</p>
+        <p>Concrete design and verification work, with the completion boundary stated for each item.</p>
       </div>
       <div class="grid">
         <article class="card">
-          <span class="tag soon">Preparing</span>
-          <h3>IC design research entry</h3>
+          <span class="tag">Functionally validated</span>
+          <h3>6T SRAM bitcell</h3>
           <p>
-            Building the background needed for graduate research in integrated circuit design, with attention to digital/RF IC design,
-            device-aware circuit thinking, and EDA workflows.
+            Built and debugged a transistor-level 6T cell in Cadence. Spectre transient tests at 1.2 V verified
+            write-0, write-1, and hold behavior after correcting the supply setup and NMOS bulk connections.
           </p>
         </article>
         <article class="card">
-          <span class="tag soon">Reading queue</span>
-          <h3>Computing-in-memory</h3>
+          <span class="tag">Schematic-level result</span>
+          <h3>Latch-type sense amplifier</h3>
           <p>
-            Future notes will organize paper reading, diagrams, and implementation questions around memory-centric computation and
-            hardware-efficient neural workloads.
+            Created the schematic, symbol, and testbench for a latch-type sense amplifier. At TT, 27 °C, and 1.2 V,
+            it resolved both polarities of a 50 mV differential input with approximately 53.6 ps regeneration time.
+            Corner, Monte Carlo, layout, and PEX verification remain future work.
           </p>
         </article>
         <article class="card">
-          <span class="tag soon">Research log</span>
-          <h3>Neuromorphic chips</h3>
+          <span class="tag soon">Physical-design study</span>
+          <h3>6T layout topology</h3>
           <p>
-            This section will hold summaries, vocabulary, experiment notes, and reflections related to neuromorphic computing and
-            memristive neural network hardware.
+            Compared Type-1b and thin-cell Type-4 placements, explored PDK-supported shared diffusion, and planned
+            orthogonal bit-line and word-line routing. The Type-4 view is still being iterated; full DRC, LVS, and PEX
+            sign-off has not yet been reached.
           </p>
         </article>
         <article class="card">
-          <span class="tag soon">Preparation log</span>
-          <h3>Memory circuits and measurement basics</h3>
+          <span class="tag">Regional-final project</span>
+          <h3>AI-assisted filtering balun</h3>
           <p>
-            Current preparation includes SRAM fundamentals, sense amplifier operation, artificial synaptic devices, and early notes
-            on VNA/PNA usage, GSG probe calibration, and S-parameter data handling. This is documented as study preparation rather
-            than completed research results.
+            Worked on an IPD filtering balun for the CICC FaDong Cup, using parameterized AI FCells and EMOptimizer
+            for design-space exploration, followed by UltraEM full-wave validation. The regional-final extension
+            adds a differential antenna and a broader RF verification set.
+          </p>
+          <a class="button" href="projects.html">View project evidence</a>
+        </article>
+        <article class="card">
+          <span class="tag">Prototype validated</span>
+          <h3>EDA automation workflows</h3>
+          <p>
+            Developed repeatable workflows for creating and inspecting Cadence OpenAccess cells through SSH and SKILL,
+            and for generating editable JLCEDA Pro projects directly from their SQLite/JSON representation. Demonstrations
+            include a transistor-level inverter and a small routed PCB with through-hole and 0805 footprints.
           </p>
         </article>
       </div>
@@ -520,10 +532,11 @@
           <a class="button primary" href="projects.html">Open project page</a>
         </article>
         <article class="card">
-          <span class="tag soon">Next</span>
-          <h3>Research notes</h3>
+          <span class="tag">Active log</span>
+          <h3>SRAM and EDA notes</h3>
           <p>
-            A future page can collect paper reading, diagrams, terminology, and early research logs once the material is ready.
+            Current notes connect circuit behavior, simulation debugging, layout topology, design-rule interpretation,
+            remote Cadence workflows, and reproducible automation experiments.
           </p>
         </article>
       </div>
@@ -536,20 +549,29 @@
       </div>
       <div class="timeline">
         <div class="row">
+          <strong>2026-07-17</strong>
+          <p>
+            Validated direct generation of editable JLCEDA Pro schematic and PCB projects, including nets, routing,
+            a closed board outline, through-hole footprints, and an 0805 SMD footprint.
+          </p>
+        </div>
+        <div class="row">
+          <strong>2026-07-14</strong>
+          <p>
+            Completed schematic-level 6T SRAM debugging and latch-type sense-amplifier validation, then began
+            DRC-aware Type-1b and Type-4 physical-design studies in Cadence.
+          </p>
+        </div>
+        <div class="row">
           <strong>2026-07</strong>
           <p>
-            Started a research-preparation log around memory circuits and neuromorphic hardware, including SRAM basics,
-            sense amplifiers, artificial synaptic devices, and RF/on-wafer measurement concepts such as VNA/PNA workflows,
-            GSG probe calibration, and S-parameter data handling.
+            Advanced the FaDong Cup filtering-balun project toward the regional final, expanding the design story
+            from AI-assisted passive optimization to differential-antenna integration and full-wave verification.
           </p>
         </div>
         <div class="row">
           <strong>2026-06-28</strong>
           <p>Published the first GitHub Pages site and separated the homepage from the coursework and project detail pages.</p>
-        </div>
-        <div class="row">
-          <strong>Next</strong>
-          <p>Add a visual asset library, research reading notes, and project-specific pages as real materials accumulate.</p>
         </div>
       </div>
     </section>
@@ -563,3 +585,4 @@
   </footer>
 </body>
 </html>
+

@@ -484,6 +484,32 @@
             </figure>
           </div>
         </article>
+        <article class="card wide-card">
+          <span class="tag">SRAM / Cadence</span>
+          <h3>6T SRAM Circuit, Sense Amplifier, and Physical-Design Study</h3>
+          <p>
+            This continuing study connects circuit behavior to physical implementation. A transistor-level 6T bitcell
+            was debugged and functionally verified in Spectre at 1.2 V, including write-0, write-1, and hold phases.
+            A latch-type sense amplifier was then created and tested at schematic level; at TT and 27 °C it resolved
+            both polarities of a 50 mV bit-line differential with approximately 53.6 ps regeneration time.
+            Physical-design work compares Type-1b and Type-4 cell topologies, PDK-supported diffusion sharing,
+            word-line/bit-line layer choices, and DRC feedback. The layout remains an active study: full DRC, LVS,
+            PEX, corners, and Monte Carlo sign-off are not yet claimed.
+          </p>
+        </article>
+        <article class="card wide-card">
+          <span class="tag">EDA Automation</span>
+          <h3>Cadence and JLCEDA Pro Design-Automation Prototypes</h3>
+          <p>
+            I developed two reproducible automation paths rather than relying only on manual GUI work. The Cadence
+            workflow connects to a remote design server through SSH, uses SKILL and OpenAccess APIs to create and
+            inspect schematic/layout cellviews, and independently reopens generated data for verification; a
+            transistor-level inverter served as the demonstration cell. The JLCEDA Pro workflow generates editable
+            .eprj2 projects from the underlying SQLite and newline-JSON format, including schematic connectivity,
+            through-hole and 0805 footprints, routed nets, and a closed board outline. These are validated prototypes,
+            not production-tapeout or manufacturing sign-off flows.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -511,11 +537,27 @@
         </article>
         <article class="card">
           <span class="tag">CICC</span>
-          <h3>Preliminary report outcome</h3>
+          <h3>Regional-final development</h3>
           <p>
-            The FaDong Cup technical document records the team's preliminary design, simulation flow,
-            tool comparison, and final performance summary. The project has advanced from the preliminary round
-            to the regional final; cleaned figures and presentation images can be added here later.
+            The project record now covers the preliminary filtering-balun design, EMOptimizer/UltraEM workflow,
+            regional-final presentation work, and the differential-antenna extension with planned S-parameter,
+            impedance, efficiency, gain, pattern, and surface-current evidence.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag">SRAM</span>
+          <h3>Measured simulation evidence</h3>
+          <p>
+            The SRAM record is grounded in Spectre waveforms, extracted transition timing, independent OA readback,
+            and explicit DRC status. Schematic-level results are kept separate from unfinished physical sign-off.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag">Automation</span>
+          <h3>Editable design artifacts</h3>
+          <p>
+            Automation demonstrations produce native editable Cadence cellviews and JLCEDA Pro projects rather than
+            flattened screenshots, with generation scripts, structural checks, and conservative claims about validation.
           </p>
         </article>
       </div>
@@ -528,12 +570,20 @@
       </div>
       <div class="timeline">
         <div class="row">
-          <strong>2026-06-28</strong>
-          <p>Separated projects into their own detail page so the homepage can stay as a concise navigation hub.</p>
+          <strong>2026-07-17</strong>
+          <p>Added Cadence/OpenAccess and JLCEDA Pro automation prototypes with explicit validation boundaries.</p>
         </div>
         <div class="row">
-          <strong>Next</strong>
-          <p>Add cleaned IC competition figures and optional MCM SHAP evidence when those materials are ready.</p>
+          <strong>2026-07-14</strong>
+          <p>Added the 6T SRAM bitcell, latch-type sense amplifier, and physical-design study.</p>
+        </div>
+        <div class="row">
+          <strong>2026-07</strong>
+          <p>Expanded the FaDong Cup record with regional-final and differential-antenna development.</p>
+        </div>
+        <div class="row">
+          <strong>2026-06-28</strong>
+          <p>Separated projects into their own detail page so the homepage can stay as a concise navigation hub.</p>
         </div>
       </div>
     </section>
@@ -547,3 +597,4 @@
   </footer>
 </body>
 </html>
+
